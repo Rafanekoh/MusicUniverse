@@ -388,20 +388,6 @@
           useBackupData = true;
           console.log('Usando dados simulados para:', query);
           data = createMockData(query);
-          
-          // Coloca uma mensagem informativa no topo dos resultados
-          setTimeout(() => {
-            const infoDiv = document.createElement('div');
-            infoDiv.className = 'error';
-            infoDiv.style.backgroundColor = '#fffbd6'; 
-            infoDiv.style.color = '#333';
-            infoDiv.style.padding = '10px';
-            infoDiv.style.marginBottom = '20px';
-            infoDiv.style.borderRadius = '8px';
-            infoDiv.innerHTML = `
-              <p>⚠️ As APIs de música estão indisponíveis no momento. Mostrando dados simulados para "${query}".</p>
-              <p>Audio e links de streaming funcionam normalmente.</p>
-            `;
             
             if (document.getElementById('results')) {
               document.getElementById('results').insertAdjacentElement('afterbegin', infoDiv);
